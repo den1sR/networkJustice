@@ -22,11 +22,6 @@ export class NetworkMetricesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this._route.params.subscribe(params => {
-      this.jsStr = params['userId'];
-      // this.unitId = params['unitId'];
-    })
-    console.log(this.jsStr)
 
 
 
