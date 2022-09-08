@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Nodes } from '../nodes';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class NetworkMetricesComponent implements OnInit {
   bom: any;
 fwl:any;
 
-  constructor(private _route: ActivatedRoute) { }
+  constructor(private _route: ActivatedRoute,private location: Location) { }
 
   ngOnInit(): void {
 
@@ -39,5 +40,7 @@ this.fwl = this.jsStr.data.Edges.filter(element => element.Source === element.Ta
     console.log("this is obt: " + this.blya);
     console.log(this.lenNodes);
   }
-
+  back(): void {
+    this.location.back()
+  }
 }
