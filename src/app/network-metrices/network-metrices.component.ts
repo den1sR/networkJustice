@@ -18,27 +18,22 @@ export class NetworkMetricesComponent implements OnInit {
   jsSt: [] = [];
   edgesObj: [] = [];
   nodesNum: string;
-  blya: any;
+  objEdgesArr: any;
   strArr: any;
   bom: any;
-fwl:any;
+  fwl: any;
 
-  constructor(private _route: ActivatedRoute,private location: Location) { }
+  constructor(private _route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
 
     this.jsStr = history.state;
-    this.blya = this.jsStr.data.Edges.filter(element => element.Source === "100094");
-this.fwl = this.jsStr.data.Edges.filter(element => element.Source === element.Target);
+    this.objEdgesArr = this.jsStr.data.Edges.filter(element => element.Source === "100094");
+    this.fwl = this.jsStr.data.Edges.filter(element => element.Source === element.Target);
     this.lenNodes = JSON.parse(JSON.stringify(this.jsStr.data.Nodes));
     this.edgesObj = JSON.parse(JSON.stringify(this.jsStr.data));
     this.nodesNum = this.lenNodes.length;
-    console.log(this.edgesObj);
     this.strArr = JSON.stringify(this.jsStr.data.Edges);
-
-    // console.log(this.jsStr.data.Nodes.length);
-    console.log("this is obt: " + this.blya);
-    console.log(this.lenNodes);
   }
   back(): void {
     this.location.back()
