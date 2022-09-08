@@ -1,0 +1,60 @@
+<!-- <p-table #dt1 [value]="lenNodes" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10,25,50]"  styleClass="p-datatable-customers p-datatable-gridlines"
+        [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['Id','Label']">
+        <ng-template pTemplate="caption">
+            <div class="p-d-flex">
+                <!-- <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash"
+                    (click)="clear(dt1)"></button> -->
+               <!-- <span class="p-input-icon-left p-ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')" 
+                        placeholder="Search keyword" />
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+                    <div class="p-d-flex p-jc-between p-ai-center">
+                        Lable
+                        <p-columnFilter type="text" field="Lable" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-lenNodes>
+            <tr>
+                <td style="text-align: right">
+                    <span class="image-text">{{lenNodes.Label}}</span>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="7">No customers found.</td>
+            </tr>
+        </ng-template>
+    </p-table> -->
+    <div>
+        <table>
+            <tr>
+              <th>Nodes</th>
+              <th>Edges</th>
+              <th>Avg. Degree</th>
+              <th>Avg. Weighted Degree</th>
+              <th>Density</th>
+              <th>Density (as Undirected)</th>
+              <th>Connected Components (as Undirected)</th>
+            </tr>
+            <tr>
+              <td>{{nodesNum}}</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </table>
+    </div>
